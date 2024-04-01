@@ -1,0 +1,5 @@
+# --
+# connect to raspberry pico
+
+# set udev rules in /etc/udev/rules.d
+SUBSYSTEM=="usb", ATTRS{idVendor}=="2e8a", ATTRS{idProduct}=="0005", GROUP="users", MODE="0666"
