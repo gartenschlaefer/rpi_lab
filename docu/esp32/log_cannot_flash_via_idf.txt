@@ -1,0 +1,186 @@
+# log of using my bash shell
+# my name was replaced by user
+
+./install.sh
+Detecting the Python interpreter
+Checking "python3" ...
+Python 3.11.4
+"python3" has been detected
+Checking Python compatibility
+Installing ESP-IDF tools
+Updating /home/user/.espressif/idf-env.json
+Selected targets are: esp32c3, esp32h2, esp32c6, esp32c2, esp32, esp32s3, esp32s2, esp32c5, esp32p4
+Current system platform: linux-amd64
+Installing tools: xtensa-esp-elf-gdb, riscv32-esp-elf-gdb, xtensa-esp-elf, riscv32-esp-elf, esp32ulp-elf, openocd-esp32, esp-rom-elfs
+Skipping xtensa-esp-elf-gdb@12.1_20231023 (already installed)
+Installing riscv32-esp-elf-gdb@12.1_20231023
+Downloading https://github.com/espressif/binutils-gdb/releases/download/esp-gdb-v12.1_20231023/riscv32-esp-elf-gdb-12.1_20231023-x86_64-linux-gnu.tar.gz
+Destination: /home/user/.espressif/dist/riscv32-esp-elf-gdb-12.1_20231023-x86_64-linux-gnu.tar.gz.tmp
+Done
+Extracting /home/user/.espressif/dist/riscv32-esp-elf-gdb-12.1_20231023-x86_64-linux-gnu.tar.gz to /home/user/.espressif/tools/riscv32-esp-elf-gdb/12.1_20231023
+Skipping xtensa-esp-elf@esp-13.2.0_20230928 (already installed)
+Installing riscv32-esp-elf@esp-13.2.0_20230928
+Downloading https://github.com/espressif/crosstool-NG/releases/download/esp-13.2.0_20230928/riscv32-esp-elf-13.2.0_20230928-x86_64-linux-gnu.tar.xz
+Destination: /home/user/.espressif/dist/riscv32-esp-elf-13.2.0_20230928-x86_64-linux-gnu.tar.xz.tmp
+Done
+Extracting /home/user/.espressif/dist/riscv32-esp-elf-13.2.0_20230928-x86_64-linux-gnu.tar.xz to /home/user/.espressif/tools/riscv32-esp-elf/esp-13.2.0_20230928
+Skipping esp32ulp-elf@2.35_20220830 (already installed)
+Skipping openocd-esp32@v0.12.0-esp32-20230921 (already installed)
+Skipping esp-rom-elfs@20230320 (already installed)
+Installing Python environment and packages
+Python 3.11.4
+pip 23.3.1 from /home/user/.espressif/python_env/idf5.3_py3.11_env/lib/python3.11/site-packages/pip (python 3.11)
+Upgrading pip and setuptools...
+Requirement already satisfied: pip in /home/user/.espressif/python_env/idf5.3_py3.11_env/lib/python3.11/site-packages (23.3.1)
+Requirement already satisfied: setuptools in /home/user/.espressif/python_env/idf5.3_py3.11_env/lib/python3.11/site-packages (69.0.2)
+Skipping the download of /home/user/.espressif/espidf.constraints.v5.3.txt because it was downloaded recently.
+Installing Python packages
+ Constraint file: /home/user/.espressif/espidf.constraints.v5.3.txt
+ Requirement files:
+  - /home/user/git/esp-idf/tools/requirements/requirements.core.txt
+Looking in indexes: https://pypi.org/simple, https://dl.espressif.com/pypi
+Ignoring importlib_metadata: markers 'python_version < "3.8"' don't match your environment
+Requirement already satisfied: setuptools in /home/user/.espressif/python_env/idf5.3_py3.11_env/lib/python3.11/site-packages (from -r /home/user/git/esp-idf/tools/requirements/requirements.core.txt (line 3)) (69.0.2)
+Requirement already satisfied: packaging in /home/user/.espressif/python_env/idf5.3_py3.11_env/lib/python3.11/site-packages (from -r /home/user/git/esp-idf/tools/requirements/requirements.core.txt (line 4)) (23.2)
+Requirement already satisfied: click in /home/user/.espressif/python_env/idf5.3_py3.11_env/lib/python3.11/site-packages (from -r /home/user/git/esp-idf/tools/requirements/requirements.core.txt (line 7)) (8.1.7)
+Requirement already satisfied: pyserial in /home/user/.espressif/python_env/idf5.3_py3.11_env/lib/python3.11/site-packages (from -r /home/user/git/esp-idf/tools/requirements/requirements.core.txt (line 8)) (3.5)
+Requirement already satisfied: cryptography in /home/user/.espressif/python_env/idf5.3_py3.11_env/lib/python3.11/site-packages (from -r /home/user/git/esp-idf/tools/requirements/requirements.core.txt (line 9)) (41.0.7)
+Requirement already satisfied: pyparsing in /home/user/.espressif/python_env/idf5.3_py3.11_env/lib/python3.11/site-packages (from -r /home/user/git/esp-idf/tools/requirements/requirements.core.txt (line 10)) (3.1.1)
+Requirement already satisfied: pyelftools in /home/user/.espressif/python_env/idf5.3_py3.11_env/lib/python3.11/site-packages (from -r /home/user/git/esp-idf/tools/requirements/requirements.core.txt (line 11)) (0.30)
+Requirement already satisfied: idf-component-manager in /home/user/.espressif/python_env/idf5.3_py3.11_env/lib/python3.11/site-packages (from -r /home/user/git/esp-idf/tools/requirements/requirements.core.txt (line 12)) (1.4.1)
+Requirement already satisfied: esp-coredump in /home/user/.espressif/python_env/idf5.3_py3.11_env/lib/python3.11/site-packages (from -r /home/user/git/esp-idf/tools/requirements/requirements.core.txt (line 13)) (1.9.0)
+Requirement already satisfied: esptool in /home/user/.espressif/python_env/idf5.3_py3.11_env/lib/python3.11/site-packages (from -r /home/user/git/esp-idf/tools/requirements/requirements.core.txt (line 14)) (4.7.dev3)
+Requirement already satisfied: esp-idf-kconfig in /home/user/.espressif/python_env/idf5.3_py3.11_env/lib/python3.11/site-packages (from -r /home/user/git/esp-idf/tools/requirements/requirements.core.txt (line 15)) (2.0.1)
+Requirement already satisfied: esp-idf-monitor in /home/user/.espressif/python_env/idf5.3_py3.11_env/lib/python3.11/site-packages (from -r /home/user/git/esp-idf/tools/requirements/requirements.core.txt (line 16)) (1.3.4)
+Requirement already satisfied: esp-idf-size in /home/user/.espressif/python_env/idf5.3_py3.11_env/lib/python3.11/site-packages (from -r /home/user/git/esp-idf/tools/requirements/requirements.core.txt (line 17)) (1.0.1)
+Requirement already satisfied: esp-idf-panic-decoder in /home/user/.espressif/python_env/idf5.3_py3.11_env/lib/python3.11/site-packages (from -r /home/user/git/esp-idf/tools/requirements/requirements.core.txt (line 18)) (0.2.0)
+Requirement already satisfied: pyclang in /home/user/.espressif/python_env/idf5.3_py3.11_env/lib/python3.11/site-packages (from -r /home/user/git/esp-idf/tools/requirements/requirements.core.txt (line 19)) (0.4.2)
+Requirement already satisfied: construct in /home/user/.espressif/python_env/idf5.3_py3.11_env/lib/python3.11/site-packages (from -r /home/user/git/esp-idf/tools/requirements/requirements.core.txt (line 20)) (2.10.69)
+Requirement already satisfied: freertos_gdb in /home/user/.espressif/python_env/idf5.3_py3.11_env/lib/python3.11/site-packages (from -r /home/user/git/esp-idf/tools/requirements/requirements.core.txt (line 23)) (1.0.2)
+Requirement already satisfied: cffi>=1.12 in /home/user/.espressif/python_env/idf5.3_py3.11_env/lib/python3.11/site-packages (from cryptography->-r /home/user/git/esp-idf/tools/requirements/requirements.core.txt (line 9)) (1.16.0)
+Requirement already satisfied: cachecontrol[filecache] in /home/user/.espressif/python_env/idf5.3_py3.11_env/lib/python3.11/site-packages (from idf-component-manager->-r /home/user/git/esp-idf/tools/requirements/requirements.core.txt (line 12)) (0.13.1)
+Requirement already satisfied: colorama in /home/user/.espressif/python_env/idf5.3_py3.11_env/lib/python3.11/site-packages (from idf-component-manager->-r /home/user/git/esp-idf/tools/requirements/requirements.core.txt (line 12)) (0.4.6)
+Requirement already satisfied: pyyaml in /home/user/.espressif/python_env/idf5.3_py3.11_env/lib/python3.11/site-packages (from idf-component-manager->-r /home/user/git/esp-idf/tools/requirements/requirements.core.txt (line 12)) (6.0.1)
+Requirement already satisfied: requests in /home/user/.espressif/python_env/idf5.3_py3.11_env/lib/python3.11/site-packages (from idf-component-manager->-r /home/user/git/esp-idf/tools/requirements/requirements.core.txt (line 12)) (2.31.0)
+Requirement already satisfied: requests-file in /home/user/.espressif/python_env/idf5.3_py3.11_env/lib/python3.11/site-packages (from idf-component-manager->-r /home/user/git/esp-idf/tools/requirements/requirements.core.txt (line 12)) (1.5.1)
+Requirement already satisfied: requests-toolbelt in /home/user/.espressif/python_env/idf5.3_py3.11_env/lib/python3.11/site-packages (from idf-component-manager->-r /home/user/git/esp-idf/tools/requirements/requirements.core.txt (line 12)) (1.0.0)
+Requirement already satisfied: schema in /home/user/.espressif/python_env/idf5.3_py3.11_env/lib/python3.11/site-packages (from idf-component-manager->-r /home/user/git/esp-idf/tools/requirements/requirements.core.txt (line 12)) (0.7.5)
+Requirement already satisfied: six in /home/user/.espressif/python_env/idf5.3_py3.11_env/lib/python3.11/site-packages (from idf-component-manager->-r /home/user/git/esp-idf/tools/requirements/requirements.core.txt (line 12)) (1.16.0)
+Requirement already satisfied: tqdm in /home/user/.espressif/python_env/idf5.3_py3.11_env/lib/python3.11/site-packages (from idf-component-manager->-r /home/user/git/esp-idf/tools/requirements/requirements.core.txt (line 12)) (4.66.1)
+Requirement already satisfied: urllib3<2 in /home/user/.espressif/python_env/idf5.3_py3.11_env/lib/python3.11/site-packages (from idf-component-manager->-r /home/user/git/esp-idf/tools/requirements/requirements.core.txt (line 12)) (1.26.18)
+Requirement already satisfied: pygdbmi>=0.9.0.2 in /home/user/.espressif/python_env/idf5.3_py3.11_env/lib/python3.11/site-packages (from esp-coredump->-r /home/user/git/esp-idf/tools/requirements/requirements.core.txt (line 13)) (0.9.0.2)
+Requirement already satisfied: bitstring>=3.1.6 in /home/user/.espressif/python_env/idf5.3_py3.11_env/lib/python3.11/site-packages (from esptool->-r /home/user/git/esp-idf/tools/requirements/requirements.core.txt (line 14)) (4.1.4)
+Requirement already satisfied: ecdsa>=0.16.0 in /home/user/.espressif/python_env/idf5.3_py3.11_env/lib/python3.11/site-packages (from esptool->-r /home/user/git/esp-idf/tools/requirements/requirements.core.txt (line 14)) (0.18.0)
+Requirement already satisfied: reedsolo<1.8,>=1.5.3 in /home/user/.espressif/python_env/idf5.3_py3.11_env/lib/python3.11/site-packages (from esptool->-r /home/user/git/esp-idf/tools/requirements/requirements.core.txt (line 14)) (1.7.0)
+Requirement already satisfied: intelhex in /home/user/.espressif/python_env/idf5.3_py3.11_env/lib/python3.11/site-packages (from esptool->-r /home/user/git/esp-idf/tools/requirements/requirements.core.txt (line 14)) (2.3.0)
+Requirement already satisfied: kconfiglib>=13.7.1 in /home/user/.espressif/python_env/idf5.3_py3.11_env/lib/python3.11/site-packages (from esp-idf-kconfig->-r /home/user/git/esp-idf/tools/requirements/requirements.core.txt (line 15)) (14.1.0)
+Requirement already satisfied: rich in /home/user/.espressif/python_env/idf5.3_py3.11_env/lib/python3.11/site-packages (from esp-idf-size->-r /home/user/git/esp-idf/tools/requirements/requirements.core.txt (line 17)) (13.7.0)
+Requirement already satisfied: bitarray<3.0.0,>=2.8.0 in /home/user/.espressif/python_env/idf5.3_py3.11_env/lib/python3.11/site-packages (from bitstring>=3.1.6->esptool->-r /home/user/git/esp-idf/tools/requirements/requirements.core.txt (line 14)) (2.8.4)
+Requirement already satisfied: pycparser in /home/user/.espressif/python_env/idf5.3_py3.11_env/lib/python3.11/site-packages (from cffi>=1.12->cryptography->-r /home/user/git/esp-idf/tools/requirements/requirements.core.txt (line 9)) (2.21)
+Requirement already satisfied: msgpack>=0.5.2 in /home/user/.espressif/python_env/idf5.3_py3.11_env/lib/python3.11/site-packages (from cachecontrol[filecache]->idf-component-manager->-r /home/user/git/esp-idf/tools/requirements/requirements.core.txt (line 12)) (1.0.7)
+Requirement already satisfied: filelock>=3.8.0 in /home/user/.espressif/python_env/idf5.3_py3.11_env/lib/python3.11/site-packages (from cachecontrol[filecache]->idf-component-manager->-r /home/user/git/esp-idf/tools/requirements/requirements.core.txt (line 12)) (3.13.1)
+Requirement already satisfied: charset-normalizer<4,>=2 in /home/user/.espressif/python_env/idf5.3_py3.11_env/lib/python3.11/site-packages (from requests->idf-component-manager->-r /home/user/git/esp-idf/tools/requirements/requirements.core.txt (line 12)) (3.3.2)
+Requirement already satisfied: idna<4,>=2.5 in /home/user/.espressif/python_env/idf5.3_py3.11_env/lib/python3.11/site-packages (from requests->idf-component-manager->-r /home/user/git/esp-idf/tools/requirements/requirements.core.txt (line 12)) (3.6)
+Requirement already satisfied: certifi>=2017.4.17 in /home/user/.espressif/python_env/idf5.3_py3.11_env/lib/python3.11/site-packages (from requests->idf-component-manager->-r /home/user/git/esp-idf/tools/requirements/requirements.core.txt (line 12)) (2023.11.17)
+Requirement already satisfied: markdown-it-py>=2.2.0 in /home/user/.espressif/python_env/idf5.3_py3.11_env/lib/python3.11/site-packages (from rich->esp-idf-size->-r /home/user/git/esp-idf/tools/requirements/requirements.core.txt (line 17)) (3.0.0)
+Requirement already satisfied: pygments<3.0.0,>=2.13.0 in /home/user/.espressif/python_env/idf5.3_py3.11_env/lib/python3.11/site-packages (from rich->esp-idf-size->-r /home/user/git/esp-idf/tools/requirements/requirements.core.txt (line 17)) (2.17.2)
+Requirement already satisfied: contextlib2>=0.5.5 in /home/user/.espressif/python_env/idf5.3_py3.11_env/lib/python3.11/site-packages (from schema->idf-component-manager->-r /home/user/git/esp-idf/tools/requirements/requirements.core.txt (line 12)) (21.6.0)
+Requirement already satisfied: mdurl~=0.1 in /home/user/.espressif/python_env/idf5.3_py3.11_env/lib/python3.11/site-packages (from markdown-it-py>=2.2.0->rich->esp-idf-size->-r /home/user/git/esp-idf/tools/requirements/requirements.core.txt (line 17)) (0.1.2)
+All done! You can now run:
+
+  . ./export.sh
+
+(base) [user@t14 esp-idf]$ ls
+add_path.sh          docs         install.fish  README.md
+CMakeLists.txt       examples     install.ps1   sdkconfig.rename
+COMPATIBILITY_CN.md  export.bat   install.sh    SECURITY.md
+COMPATIBILITY.md     export.fish  Kconfig       sonar-project.properties
+components           export.ps1   LICENSE       SUPPORT_POLICY_CN.md
+conftest.py          export.sh    pytest.ini    SUPPORT_POLICY.md
+CONTRIBUTING.md      install.bat  README_CN.md  tools
+
+(base) [user@t14 esp-idf]$ . ./export.sh
+Detecting the Python interpreter
+Checking "python3" ...
+Python 3.11.4
+"python3" has been detected
+Checking Python compatibility
+Checking other ESP-IDF version.
+Adding ESP-IDF tools to PATH...
+Checking if Python packages are up to date...
+Constraint file: /home/user/.espressif/espidf.constraints.v5.3.txt
+Requirement files:
+ - /home/user/git/esp-idf/tools/requirements/requirements.core.txt
+Python being checked: /home/user/.espressif/python_env/idf5.3_py3.11_env/bin/python
+Python requirements are satisfied.
+Added the following directories to PATH:
+  /home/user/git/esp-idf/components/espcoredump
+  /home/user/git/esp-idf/components/partition_table
+  /home/user/git/esp-idf/components/app_update
+  /home/user/.espressif/tools/riscv32-esp-elf-gdb/12.1_20231023/riscv32-esp-elf-gdb/bin
+  /home/user/.espressif/tools/riscv32-esp-elf/esp-13.2.0_20230928/riscv32-esp-elf/bin
+Done! You can now compile ESP-IDF projects.
+Go to the project directory and run:
+
+  idf.py build
+  
+(base) [user@t14 esp-idf]$ cd ../../esp32/hello_world/
+
+(base) [user@t14 hello_world]$ idf.py build
+
+Executing action: all (aliases: build)
+Running ninja in directory /home/user/esp32/hello_world/build
+Executing "ninja all"...
+[1/4] cd /home/user/esp32/hello_w...sp32/hello_world/build/hello_world.bin
+hello_world.bin binary size 0x2b6c0 bytes. Smallest app partition is 0x100000 bytes. 0xd4940 bytes (83%) free.
+[1/1] cd /home/user/esp32/hello_w..._world/build/bootloader/bootloader.bin
+Bootloader binary size 0x6810 bytes. 0x7f0 bytes (7%) free.
+[4/4] Completed 'bootloader'
+Project build complete. To flash, run:
+ idf.py flash
+or
+ idf.py -p PORT flash
+or
+ python -m esptool --chip esp32 -b 460800 --before default_reset --after hard_reset write_flash --flash_mode dio --flash_size 2MB --flash_freq 40m 0x1000 build/bootloader/bootloader.bin 0x8000 build/partition_table/partition-table.bin 0x10000 build/hello_world.bin
+or from the "/home/user/esp32/hello_world/build" directory
+ python -m esptool --chip esp32 -b 460800 --before default_reset --after hard_reset write_flash "@flash_args"
+
+(base) [user@t14 hello_world]$ sudo idf.py -p /dev/ttyUSB0 flash
+[sudo] password for user: 
+Setting IDF_PATH environment variable: /home/user/git/esp-idf
+ERROR: /root/.espressif/python_env/idf5.3_py3.11_env/bin/python doesn't exist! Please run the install script or "idf_tools.py install-python-env" in order to create it
+
+ESP-IDF v5.3-dev-796-g30870c819f-dirty
+
+
+(pi) [user@t14 hello_world]$ sudo python -m esptool --chip esp32 -b 460800 --before default_reset --after hard_reset write_flash --flash_mode dio --flash_size 2MB --flash_freq 40m 0x1000 build/bootloader/bootloader.bin 0x8000 build/partition_table/partition-table.bin 0x10000 build/hello_world.bin
+[sudo] password for user: 
+esptool.py v4.7.dev3
+Found 1 serial ports
+Serial port /dev/ttyUSB0
+Connecting.....
+Chip is ESP32-D0WD-V3 (revision v3.1)
+Features: WiFi, BT, Dual Core, 240MHz, VRef calibration in efuse, Coding Scheme None
+Crystal is 40MHz
+MAC: 08:d1:f9:e1:c9:d0
+Uploading stub...
+Running stub...
+Stub running...
+Changing baud rate to 460800
+Changed.
+Configuring flash size...
+Flash will be erased from 0x00001000 to 0x00007fff...
+Flash will be erased from 0x00008000 to 0x00008fff...
+Flash will be erased from 0x00010000 to 0x0003bfff...
+Compressed 26640 bytes to 16341...
+Wrote 26640 bytes (16341 compressed) at 0x00001000 in 0.5 seconds (effective 411.1 kbit/s)...
+Hash of data verified.
+Compressed 3072 bytes to 103...
+Wrote 3072 bytes (103 compressed) at 0x00008000 in 0.0 seconds (effective 1426.4 kbit/s)...
+Hash of data verified.
+Compressed 177856 bytes to 95329...
+Wrote 177856 bytes (95329 compressed) at 0x00010000 in 2.3 seconds (effective 613.5 kbit/s)...
+Hash of data verified.
+
+Leaving...
+Hard resetting via RTS pin...
