@@ -1,0 +1,18 @@
+# --
+# raspberry pico connect
+
+# udev rule, relax usb device access
+# save in: /etc/udev/rules.d/
+SUBSYSTEMS=="usb", ATTRS{idVendor}=="2e8a", ATTRS{idProduct}=="0005", GROUP="users", MODE="0666"
+
+# connect via minicom
+minicom -D /dev/ttyACM0
+
+# connect (optional: --buffer-size=512)
+rshell -p /dev/ttyACM0
+
+# direct command
+rshell -p /dev/ttyACM0 ls /pyboard
+
+# copy main
+rshell -p /dev/ttyACM0 cp /world/dekutree/git/rpi_lab/i2c/main.py /pyboard/
