@@ -1,16 +1,25 @@
 # --
-# makefile i2c
+# makefile rpi
 
 # name of main file
-main_file_name = "main"
+board_name = "pyboard"
+main_file_name = "main.py"
+device = "/dev/ttyACM0"
+
+# --
+# make rules
 
 # general
 all: build
 
 # build
 build:
-	rshell -p /dev/ttyACM0 cp /world/dekutree/git/rpi_lab/i2c/main.py /pyboard/
+	rshell -p $(device) cp ./$(main_file_name) /$(board_name)/
 
-# serial communication
+# read main file
+read:
+	rshell -p $(device) cat /$(board_name)/$(main_file_name)
+
+# communicate
 com:
-	minicom -D /dev/ttyACM0
+	minicom -D $(device)

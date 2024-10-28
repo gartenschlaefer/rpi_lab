@@ -45,21 +45,25 @@ def main(led, i2c):
   i2c_addr = 16
 
   # runtime print
-  if runtime > 100:
+  if runtime > 1000:
     runtime = 0
     print("life sign <3")
     led.toggle()
 
   # add
   runtime += 1
-  print(runtime)
+  #print(runtime)
 
-  # read
-  try:
-    read_data = i2c.readfrom(i2c_addr, 2, True)
-    print("data: ", read_data)
-  except:
-    pass
+  # # read
+  # try:
+  #   read_data = i2c.readfrom(i2c_addr, 2, True)
+  #   print("data: ", read_data)
+  # except:
+  #   pass
+
+  # read no exception
+  read_data = i2c.readfrom(i2c_addr, 2, True)
+  print("data: ", read_data)
 
   # buffer
   #rx_buffer = bytearray(2)
@@ -75,10 +79,23 @@ if __name__ == "__main__":
 
   print("-- Setup I2C")
 
-  # parameter definition
-  led = Pin("LED", Pin.OUT)
-  i2c = I2C(0, scl = Pin(17), sda = Pin(16), freq = 200000)
-  #i2c = SoftI2C(scl = Pin(17), sda = Pin(16), freq = 200000)
+  # led
+  led = Pin("LED", mode=Pin.OUT)
+
+  # i2c pins
+  scl_pin = Pin(17, mode=Pin.ALT)
+  sda_pin = Pin(16, mode=Pin.ALT)
+
+  # pins
+  print("pin16: ", Pin(16))
+  print("pin17: ", Pin(17))
+  print("pin20: ", Pin(20))
+  print("pin21: ", Pin(21))
+
+  #i2c = I2C(0, scl=Pin(17), sda=Pin(16), freq=200000)
+  i2c = I2C(0, scl=scl_pin, sda=sda_pin, freq=100000)
+  #i2c = SoftI2C(scl=Pin(17), sda=Pin(16), freq=200000)
+  #i2c = SoftI2C(scl=Pin(22), sda=Pin(21), freq=200000)
 
   # off led
   led.off()

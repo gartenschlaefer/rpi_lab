@@ -1,0 +1,19 @@
+# --
+# create an udev rule so that you do not have to use sudo
+
+# --
+# my rule
+
+# Set group for a programmer matching with vendor and product IDs
+# SUBSYSTEM=="usb", ATTRS{idVendor}=="your Vendor ID", ATTRS{idProduct}=="your Product ID", GROUP="uucp", MODE="0666"
+
+# rule for esp32
+# SUBSYSTEM=="usb", ATTRS{idVendor}=="10c4", ATTRS{idProduct}=="ea60", GROUP="uucp", MODE="0666"
+KERNEL=="ttyUSB0", ATTRS{idVendor}=="10c4", ATTRS{idProduct}=="ea60", GROUP="uucp", MODE="0666"
+
+
+# --
+# info tools udevadmin
+
+udevadm info /dev/ttyUSB0
+lsusb
