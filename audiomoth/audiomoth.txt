@@ -1,0 +1,26 @@
+# --
+# audiomoth
+
+# config
+audiomoth must be configured via configuration apps from website: https://www.openacousticdevices.info/
+time: AudioMothTimeAppSetup1.1.3.AppImage
+audiomoth: AudioMothConfigurationAppSetup1.12.1
+usb mic: AudioMothUSBMicrophoneAppSetup1.2.4
+
+the audiomoth has a switch with 3 positions:
+  - custom
+  - usb / off
+  - default
+
+for the config over usb it as to be placed in the middle ot (- usb / off) 
+recording can be done over the - custom or - default switch where the only difference is the used scheduling, the scheduling is ignored in the default mode
+
+# firmware
+Install firmware of audiomoth or usb mic: AudioMothFlashAppSetup1.7.0.AppImage
+
+# usb mic
+config as usb mic with
+test with: AudioMothLiveAppSetup1.1.2.AppImage
+
+# experiences
+synth nts1 test: aux out to audiomoth in, quality is very bad, a lot of clicks, maybe its the wrong input level from the synth, very loud as well
