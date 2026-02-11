@@ -11,6 +11,9 @@ cd ../project_folder
 idf.py set-target esp32
 idf.py set-target esp32-S3
 
+# settings
+idf.py menuconfig
+
 # build
 idf.py build
 
