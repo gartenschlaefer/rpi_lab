@@ -9,6 +9,7 @@ cd ../project_folder
 
 # set target
 idf.py set-target esp32
+idf.py set-target esp32-S3
 
 # build
 idf.py build

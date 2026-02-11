@@ -1,0 +1,8 @@
+# --
+# my hardware
+
+# development board
+board: ESP32-S3-Korvo-2 V3.1
+
+# peripherals
+lcd: Ilitek ILI934, 2.4" 320x240 SPI LCD display module
