@@ -23,6 +23,9 @@ idf.py flash -p /dev/ttyUSB0
 # monitor
 idf.py monitor -p /dev/ttyUSB0
 
+# disconnect monitor
+strg-altgr-]
+
 # run with emulator qemu: 
 # https://docs.espressif.com/projects/esp-idf/en/stable/esp32s3/api-guides/tools/qemu.html
 

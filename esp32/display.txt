@@ -1,0 +1,30 @@
+# --
+# display
+
+# working with esp32 is a nightmare, trying to run the display on the korvo 2 took me noch more than 4h
+
+# i could get some progress with these examples:
+https://github.com/espressif/esp-bsp
+
+# but ended in following error messages:
+<
+I (358) ili9341: LCD panel create success, version: 2.0.2
+E (488) i2c.master: I2C transaction unexpected nack detected
+E (488) i2c.master: s_i2c_synchronous_transaction(924): I2C transaction failed
+E (488) i2c.master: i2c_master_receive(1240): I2C transaction failed
+E (528) lcd_panel.io.i2c: panel_io_i2c_rx_buffer(147): i2c transaction failed
+E (528) TT21100: esp_lcd_touch_tt21100_read_data(209): I2C read error!
+E (528) TT21100: esp_lcd_touch_new_i2c_tt21100(117): TT21100 init failed
+E (538) TT21100: Error (0x103)! Touch controller TT21100 initialization failed!
+ESP_ERROR_CHECK failed: esp_err_t 0x103 (ESP_ERR_INVALID_STATE) at 0x4200a3b6
+--- 0x4200a3b6: bsp_display_indev_init at /home/christian/git/esp-bsp/bsp/esp32_s3_korvo_2/esp32_s3_korvo_2.c:537
+file: "/home/christian/git/esp-bsp/bsp/esp32_s3_korvo_2/esp32_s3_korvo_2.c" line 537
+func: bsp_display_indev_init
+expression: bsp_touch_new(((void *)0), &tp)
+
+abort() was called at PC 0x4037bbdb on core 0
+>
+
+-> okay seems my touch does not work the cable just got loose
+
+# anyways the documentation of esp32 is horrible

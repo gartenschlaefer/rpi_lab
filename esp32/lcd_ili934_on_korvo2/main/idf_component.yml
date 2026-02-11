@@ -1,0 +1,13 @@
+# --
+# dependencies
+
+dependencies:
+
+  # idf
+  idf:
+    version: '>=4.1.0'
+
+  # bsp
+  esp32_s3_korvo_2:
+    version: "*"
+    path: /home/christian/git/esp-bsp/bsp/esp32_s3_korvo_2
