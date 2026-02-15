@@ -1,8 +1,11 @@
 # --
 # esp32 connect
 
-# activate idf environment -> my it problems issue
+# activate idf environment -> my it problems issue bashrc.
 get_idf
+
+# if you changed the python version do
+/opt/esp-idf.py/install.sh 
 
 # got to folder with project, example project in esp_idf folder
 cd ../project_folder
